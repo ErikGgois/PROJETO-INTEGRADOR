@@ -23,9 +23,19 @@
 /* Home */
 
 .conteudo{
-    height: 100px;
+    height: 400px;
     width: 100%;
     background-color: royalblue;
     text-align: center;
     color: black;
+}
+
+/* botão de login */
+.LoginLink{
+
+}
+
+/* botão de cadastrar jogo */
+.CadastroJogo{
+
 }

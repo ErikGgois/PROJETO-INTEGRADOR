@@ -1,4 +1,4 @@
-
+import '../../style/Style.css';
 
 function Rodape() {
 
