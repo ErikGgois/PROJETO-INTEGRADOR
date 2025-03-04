@@ -3,39 +3,45 @@
 /* Cabeçalho */
 
 .cabecalho {
-
+    position: absolute;
+    top: 0;
     height: 100px;
     width: 100%;
     background-color: rgb(248, 210, 42);
-    border: solid black 5px;
+    /* border: solid black 5px; */
     
 }
 
 /* Rodape */
 
-.Rodape{
-    
+.rodape{
+    position: absolute;
+    bottom: 0;
     justify-content: end;
+    height: 100px;
+    width: 100%;
     background-color: royalblue;
-    border: solid black 5px;
+    /* border: solid black 5px; */
 }
 
 /* Home */
 
-.conteudo{
+/* .conteudo{
     height: 400px;
     width: 100%;
     background-color: royalblue;
     text-align: center;
     color: black;
-}
+} */
 
 /* botão de login */
 .LoginLink{
-
+    position: absolute;
+    right: 10px;
 }
 
 /* botão de cadastrar jogo */
 .CadastroJogo{
+    position: absolute;
 
 }
