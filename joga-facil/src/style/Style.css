@@ -45,3 +45,25 @@
     position: absolute;
 
 }
+/*EVENTOS*/
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza os eventos */
+    gap: 20px; /* Espaçamento entre os cartões */
+    padding: 20px;
+}
+
+.evento-card {
+    background-color: #ffd000; 
+    border: 2px solid #007bff; 
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, px0.1); 
+
+.evento-card p {
+    margin: 5px 0; /* Espaçamento entre os textos */
+    font-size: 38px;
+}
