@@ -1,5 +1,5 @@
 import Style from "../../style/Style.css";
-import BotaoEvento from "../BotaoEvento";
+
 
 function ListaEventos() {
     let  eventos = [
@@ -9,7 +9,7 @@ function ListaEventos() {
     ];
 
     return (
-        <ul className="container" >
+        <ul className="eventos-container" >
             {eventos.map(
                 (eventoAtual, indexAtual) => (
                 <li key={indexAtual} className="evento-card">
