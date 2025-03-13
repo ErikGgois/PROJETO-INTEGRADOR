@@ -46,10 +46,10 @@
 
 }
 /*EVENTOS*/
-.container {
+.eventos-container {
     display: flex;
-    justify-content: center; /* Centraliza os eventos */
-    gap: 20px; /* Espaçamento entre os cartões */
+    justify-content: center; 
+    gap: 20px; 
     padding: 20px;
 }
 
