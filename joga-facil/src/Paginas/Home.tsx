@@ -8,8 +8,8 @@ function Home() {
         <div className="ContainerPrincipal"> 
             <Cabecalho />
             <div className="conteudo">
-                <h1>Home</h1>
-                <p>Esta é a página inicial do site</p>
+               
+       
             </div>
             <ListaEventos/>
             <Rodape />

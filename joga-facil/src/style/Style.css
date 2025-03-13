@@ -1,13 +1,19 @@
 /* Container da tela */
 
 .ContainerPrincipal{
-
+    background-image: url(../../../joga-facil/public/Fundo.png);
+    display: flex;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
 }
 
 /* Imagem da logo */
 .Logocss{
-    height: 80px;
-    width: 80px;
+    height: 150px;
+    width: 150x;
     
 }
 
@@ -16,29 +22,29 @@
 
 .cabecalho {
     position: absolute;
-    top: 0;
-    height: 100px;
+    height: 150px;
     width: 100%;
-    background-color: rgb(248, 210, 42);
-    /* border: solid black 5px; */
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
     
 }
 
 /* Rodape */
 
 .rodape{
-    position: absolute;
-    bottom: 0;
+  
     justify-content: end;
     height: 100px;
     width: 100%;
-    background-color: royalblue;
-    /* border: solid black 5px; */
+    border: 2px solid black;
+    align-items: flex-end
+
 }
 
-/* Home */
+/* Home  */
 
-/* .conteudo{
+ /*.conteudo{
     height: 400px;
     width: 100%;
     background-color: royalblue;
@@ -61,18 +67,19 @@
 .eventos-container {
     display: flex;
     justify-content: center; 
+    align-items: center;
     gap: 20px; 
     padding: 20px;
 }
 
 .evento-card {
-    background-color: #ffd000; 
+
     border: 2px solid #007bff; 
     border-radius: 10px;
-    padding: 15px;
     width: 300px;
-    height: 500px;
+    height: 300px;
     text-align: center;
+    align-items: center;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, px0.1); }
 
 .evento-card p {

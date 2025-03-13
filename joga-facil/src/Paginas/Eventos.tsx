@@ -1,12 +1,19 @@
-import Cabecalho from "../Componente/Cabecalho/index.tsx"
-import Rodape from "../Componente/Rodape/index.tsx";
+import { useNavigate, useParams } from "react-router-dom";
+import '../style/Style.css';
+
 
 function Eventos(){
-    <div>
-        <Cabecalho/>
-            <h1>Teste</h1>
-        <Rodape/>
+
+    const navegacao = useNavigate();
+
+    function HandleVoltar() {
+
+        navegacao('/');
+    }
+
+    <div className="ContainerPrincipal">
+ <button onClick={HandleVoltar} > Logar </button>
     </div>
 }
 
-export default Eventos;
+export default Eventos

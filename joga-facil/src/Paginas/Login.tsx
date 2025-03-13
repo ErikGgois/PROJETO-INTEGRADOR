@@ -1,5 +1,3 @@
-import Cabecalho from "../Componente/Cabecalho";
-import Rodape from "../Componente/Rodape";
 import { useNavigate,useParams } from "react-router-dom";
 
 function Login() {
@@ -13,14 +11,12 @@ function Login() {
         navegacao('/');
     }
     return (
-        <div>
-            <Cabecalho
-                titulo="Joga-Fácil"
-                descricao="login" />
-            Faça seu login
-            <Rodape />
-            <br /><br />
-            <button onClick={HandleVoltar} > VOLTAR</button>
+        <div className="ContainerPrincipal">
+            <h1>Colocar area de login de email e senha em seguida botão de logar ja realizado.</h1>
+
+            <hr />
+
+            <button onClick={HandleVoltar} > Logar </button>
         </div>
     )
 }
