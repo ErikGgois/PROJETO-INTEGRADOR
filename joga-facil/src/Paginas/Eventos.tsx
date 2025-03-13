@@ -9,4 +9,4 @@ function Eventos(){
     </div>
 }
 
-export default Eventos
+export default Eventos;

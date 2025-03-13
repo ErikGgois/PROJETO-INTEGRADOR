@@ -1,3 +1,15 @@
+/* Container da tela */
+
+.ContainerPrincipal{
+
+}
+
+/* Imagem da logo */
+.Logocss{
+    height: 80px;
+    width: 80px;
+    
+}
 
 
 /* Cabeçalho */
@@ -61,9 +73,11 @@
     width: 300px;
     height: 500px;
     text-align: center;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, px0.1); 
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, px0.1); }
 
 .evento-card p {
     margin: 5px 0; /* Espaçamento entre os textos */
     font-size: 38px;
 }
+
+

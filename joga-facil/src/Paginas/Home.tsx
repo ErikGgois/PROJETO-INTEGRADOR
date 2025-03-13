@@ -5,7 +5,7 @@ import '../style/Style.css';
 
 function Home() {
     return (
-        <div>
+        <div className="ContainerPrincipal"> 
             <Cabecalho />
             <div className="conteudo">
                 <h1>Home</h1>
