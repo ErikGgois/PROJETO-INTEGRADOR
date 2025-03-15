@@ -12,8 +12,9 @@
 
 /* Imagem da logo */
 .Logocss{
-    height: 150px;
-    width: 150x;
+    height: 100px;
+    width: 100x;
+    justify-content: flex-start;
     
 }
 
@@ -21,9 +22,9 @@
 /* Cabeçalho */
 
 .cabecalho {
-    position: absolute;
-    height: 150px;
+    height: 100px;
     width: 100%;
+    background-color: rgb(17, 17, 145);
     border: solid black 2px;
     display: flex;
     flex-direction: column;
@@ -37,20 +38,11 @@
     justify-content: end;
     height: 100px;
     width: 100%;
-    border: 2px solid black;
+    
     align-items: flex-end
 
 }
 
-/* Home  */
-
- /*.conteudo{
-    height: 400px;
-    width: 100%;
-    background-color: royalblue;
-    text-align: center;
-    color: black;
-} */
 
 /* botão de login */
 .LoginLink{
@@ -60,7 +52,11 @@
 
 /* botão de cadastrar jogo */
 .CadastroJogo{
-    position: absolute;
+    width: 100%;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+   
 
 }
 /*EVENTOS*/
