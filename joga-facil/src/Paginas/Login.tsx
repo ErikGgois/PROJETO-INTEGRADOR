@@ -22,8 +22,8 @@ function Login() {
                  </Link>
 
 
-                 <div className="botao"><h4> Nao tem conta ? <Link to='/cadastro'> Cadastrar
-                 </Link></h4></div>
+                 <h4> Nao tem conta ? <Link to='/cadastro'> Cadastrar
+                 </Link></h4>
             </form>
         </div>
     )
