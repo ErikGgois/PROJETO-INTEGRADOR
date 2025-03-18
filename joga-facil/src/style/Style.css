@@ -3,7 +3,7 @@
 .ContainerPrincipal{
     background-image: url(../../../joga-facil/public/Fundo.png);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -83,7 +83,7 @@
     font-size: 38px;
 }
 
-/* formulario de cadastro */
+/* formulario de cadastro / login  */
 
 .cadastro {
     display: flex;
@@ -101,6 +101,7 @@ form {
     max-width: 50%;
     width: 400px;
     margin-bottom: 20px;
+    
 
     & button {
         border-radius: 30px;
@@ -116,7 +117,7 @@ form {
 
     & input {
 
-        border: 1px solid #4643a8;
+        border: 1px solid #4735af;
         border-radius: 30px;
         height: 40px;
         background-color: #0000008e;
@@ -124,6 +125,7 @@ form {
         font-size: 16px;
         padding-left: 10px;
         outline: none;
+        
 
     }
 
@@ -131,5 +133,14 @@ form {
         color: #fff;
     }
 
+    h4 {
+
+        color: #fff;
+    }
+
+    
+
 }
+
+
 

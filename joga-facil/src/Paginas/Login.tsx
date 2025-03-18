@@ -1,30 +1,30 @@
 import { Link, useNavigate,useParams } from "react-router-dom";
+import Cabecalho from "../Componente/Cabecalho";
 
 function Login() {
 
-
-    const LoginInicial = useParams();
-    const navegacao = useNavigate();
-
-    function HandleVoltar() {
-
-        navegacao('/');
-    }
     return (
         <div className="ContainerPrincipal">
-            <h1>Colocar area de login de email e senha em seguida botão de logar ja realizado.</h1>
 
-            <hr />
-
-            <button onClick={HandleVoltar} > Logar </button>
-
-            <div className='CadastroUsuario'>
-                <Link to='/cadastro'>
+            <Cabecalho />
+            <br />
+            <form>
+                <h1>Login</h1>
+                
+                
+                <input placeholder="Email"  name="Email" type="email"/>
+                <input placeholder="Senha"  name="Senha" type="password"/>
+                <Link to='/'>
                     <h2>
-                        <button> Cadastrar </button> 
+                        <button> Logar </button> 
                     </h2>
+
                  </Link>
-            </div>
+
+
+                 <div className="botao"><h4> Nao tem conta ? <Link to='/cadastro'> Cadastrar
+                 </Link></h4></div>
+            </form>
         </div>
     )
 }
