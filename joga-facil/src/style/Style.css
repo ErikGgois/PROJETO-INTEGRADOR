@@ -83,4 +83,53 @@
     font-size: 38px;
 }
 
+/* formulario de cadastro */
+
+.cadastro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #211e72;
+    max-width: 50%;
+    width: 400px;
+    margin-bottom: 20px;
+
+    & button {
+        border-radius: 30px;
+        background-color: rgb(121, 132, 228);
+        height: 40px;
+        width: 100%;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+
+        
+    }
+
+    & input {
+
+        border: 1px solid #4643a8;
+        border-radius: 30px;
+        height: 40px;
+        background-color: #0000008e;
+        color: #fff;
+        font-size: 16px;
+        padding-left: 10px;
+        outline: none;
+
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+}
 

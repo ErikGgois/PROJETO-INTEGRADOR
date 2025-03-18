@@ -1,4 +1,4 @@
-import { useNavigate,useParams } from "react-router-dom";
+import { Link, useNavigate,useParams } from "react-router-dom";
 
 function Login() {
 
@@ -17,6 +17,14 @@ function Login() {
             <hr />
 
             <button onClick={HandleVoltar} > Logar </button>
+
+            <div className='CadastroUsuario'>
+                <Link to='/cadastro'>
+                    <h2>
+                        <button> Cadastrar </button> 
+                    </h2>
+                 </Link>
+            </div>
         </div>
     )
 }
