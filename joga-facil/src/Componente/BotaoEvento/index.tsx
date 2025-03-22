@@ -5,7 +5,7 @@ function BotaoEvento(){
     const Navegacao =useNavigate();
 
     function handleEvento(){
-        Navegacao('/Eventos');
+        Navegacao('/CadastroEventos');
 
     }
     return(

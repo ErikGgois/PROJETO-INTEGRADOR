@@ -11,9 +11,11 @@ function Eventos(){
         navegacao('/');
     }
 
+    return(
     <div className="ContainerPrincipal">
- <button onClick={HandleVoltar} > Logar </button>
+        <button onClick={HandleVoltar} > Logar </button>
     </div>
+    )
 }
 
 export default Eventos
