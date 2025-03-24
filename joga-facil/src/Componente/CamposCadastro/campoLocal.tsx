@@ -10,9 +10,8 @@ const [text, Local ] = useState('')
 
  return(
     <div className="cadastroEvento">
-        Local
         <br />
-        <input name="Local" onChange={handleChange} value={text} />
+        <input placeholder="Local" name="Local" onChange={handleChange} value={text} />
     </div>
  )
 }

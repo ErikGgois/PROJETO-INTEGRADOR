@@ -1,4 +1,4 @@
-import { useNavigate, } from "react-router-dom";
+import { Link, useNavigate, } from "react-router-dom";
 import '../style/Style.css';
 import { SetStateAction, useState } from "react";
 import Cabecalho from "../Componente/Cabecalho";
@@ -14,15 +14,28 @@ function CadastroEventos(){
     <div className="cadastroEvento">
         <Cabecalho/>
         <br />
-        <CampoEsporte/>
-        <br />
+       
+        <form>
+        <h1>Cadastro de Eventos</h1>
+        <CampoEsporte/> 
+        
         <CampoParticipantes/>
-        <br />
+        
         <CampoLocal/>
-        <br />
+   
         <CampoData/>
-        <br />
+      
         <CampoHorario/>
+
+        <Link to='/'>
+                    <h2>
+                        <button> Criar Evento </button> 
+                    </h2>
+
+                 </Link>
+        </form>
+
+       
 
     </div>
  )

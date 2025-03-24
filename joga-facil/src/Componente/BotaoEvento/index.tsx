@@ -12,7 +12,7 @@ function BotaoEvento(){
         <div>
             <ListaEventos/>
             <button onClick={handleEvento}> VER EVENTO</button>
-        </div>
+        </div> 
     )
 
 }

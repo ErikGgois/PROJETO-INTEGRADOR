@@ -9,7 +9,7 @@ function Home() {
         <div className="ContainerPrincipal"> 
             <Cabecalho />
             <div className='CadastroJogo'>
-                <Link to='/eventos'>
+                <Link to='/CadastroEventos'>
                     <h2>
                         <button> Criar Evento </button> 
                     </h2>

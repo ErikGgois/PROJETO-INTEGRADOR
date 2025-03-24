@@ -10,9 +10,8 @@ const [text, Participantes ] = useState('')
 
  return(
     <div className="cadastroEvento">
-        Participantes
         <br />
-        <input name="Participantes" onChange={handleChange} value={text} />
+        <input placeholder="Participantes" name="Participantes" onChange={handleChange} value={text} />
     </div>
  )
 }
