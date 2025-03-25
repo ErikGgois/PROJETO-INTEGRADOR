@@ -85,11 +85,7 @@
 
 /* formulario de cadastro / login  */
 
-.cadastro {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+
 
 form {
     display: flex;
@@ -143,6 +139,13 @@ form {
 /* CadastroEvento     */
 
 .cadastroEvento {
+   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cadastro {
+    background-image: url(../../../joga-facil/public/Fundo.png);
     display: flex;
     align-items: center;
     flex-direction: column;

@@ -18,15 +18,10 @@ function CadastroEventos(){
         <form>
         <h1>Cadastro de Eventos</h1>
         <CampoEsporte/> 
-        
         <CampoParticipantes/>
-        
         <CampoLocal/>
-   
         <CampoData/>
-      
         <CampoHorario/>
-
         <Link to='/'>
                     <h2>
                         <button> Criar Evento </button> 
