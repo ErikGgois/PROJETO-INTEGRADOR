@@ -1,31 +1,74 @@
-import Style from "../../style/Style.css";
+import React from "react";
+import "../../style/Style.css"
 
-
-function ListaEventos() {
-    let  eventos = [
-        { evento: "Futebol", data: "10/08", local: "Campinho" },
-        { evento: "Vôlei", data: "08/07", local: "BTC" },
-        { evento: "Futebol Americano", data: "08/04", local: "Campo" }
-    ];
-
-    return (
-        <ul className="eventos-container" >
-            {eventos.map(
-                (eventoAtual, indexAtual) => (
-                <li key={indexAtual} className="evento-card">
-                    <div>
-                        evento: {eventoAtual.evento} <br />
-                        data: {eventoAtual.data} <br />
-                        local: {eventoAtual.local} <br />
-                    </div>
-                </li>
-                
-                
-            ))}
-        </ul>
-        
-    );
-    
-    
+interface EventCardProps {
+  sport: string;
+  image: string;
+  participants: string;
+  date: string;
+  location: string;
+  color: string;
 }
-export default ListaEventos;
+
+const EventCard: React.FC<EventCardProps> = ({
+  sport,
+  image,
+  participants,
+  date,
+  location,
+  color,
+}) => {
+  return (
+    <div className="event-card" style={{ backgroundColor: color }}>
+      <div className="event-header">
+        <span>{sport}</span>
+        <span>{participants}</span>
+      </div>
+      <img src={image} alt={sport} className="event-image" />
+      <div className="event-info">
+        <p>📅 {date}</p>
+        <p>📍 {location}</p>
+      </div>
+      <button className="event-button">Participar</button>
+    </div>
+  );
+};
+
+const EventList: React.FC = () => {
+  const events = [
+    {
+      sport: "Futebol",
+      image: "https://via.placeholder.com/150",
+      participants: "7/12",
+      date: "10/04/2025",
+      location: "Quadra 1",
+      color: "#FF4D4D",
+    },
+    {
+      sport: "Vôlei",
+      image: "https://via.placeholder.com/150",
+      participants: "10/12",
+      date: "12/04/2025",
+      location: "Quadra 2",
+      color: "#FFD700",
+    },
+    {
+      sport: "Tênis",
+      image: "https://via.placeholder.com/150",
+      participants: "1/2",
+      date: "15/04/2025",
+      location: "Quadra 3",
+      color: "#9B59B6",
+    },
+  ];
+
+  return (
+    <div className="event-list">
+      {events.map((event, index) => (
+        <EventCard key={index} {...event} />
+      ))}
+    </div>
+  );
+};
+
+export default EventList;
