@@ -1,6 +1,7 @@
 import React from "react";
 import "../../style/Style.css"
 
+
 interface EventCardProps {
   sport: string;
   image: string;
@@ -38,7 +39,7 @@ const EventList: React.FC = () => {
   const events = [
     {
       sport: "Futebol",
-      image: "https://via.placeholder.com/150",
+      image: "/images/futebol.jpg",
       participants: "7/12",
       date: "10/04/2025",
       location: "Quadra 1",
@@ -46,7 +47,7 @@ const EventList: React.FC = () => {
     },
     {
       sport: "Vôlei",
-      image: "https://via.placeholder.com/150",
+      image: "/images/volei.jpg",
       participants: "10/12",
       date: "12/04/2025",
       location: "Quadra 2",
@@ -54,7 +55,7 @@ const EventList: React.FC = () => {
     },
     {
       sport: "Tênis",
-      image: "https://via.placeholder.com/150",
+      image: "/images/tenis.jpg",
       participants: "1/2",
       date: "15/04/2025",
       location: "Quadra 3",
