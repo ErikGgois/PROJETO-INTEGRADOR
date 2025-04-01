@@ -26,7 +26,7 @@ function Filtro() {
 
             </select>
 
-        </div><div id="itens">
+        </div><div id="itens"> 
 
             </div></>
     );
