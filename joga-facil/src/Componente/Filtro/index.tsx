@@ -28,13 +28,6 @@ function Filtro() {
 
         </div><div id="itens">
 
-                {/* <div className="item" data-categoria="frutas">Maçã</div>
-
-                <div className="item" data-categoria="frutas">Banana</div>
-
-                <div className="item" data-categoria="verras">Alface</div>
-
-                <div className="item" data-categoria="ver as">Cenoura</div> */}
             </div></>
     );
 }
