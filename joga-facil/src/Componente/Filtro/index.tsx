@@ -16,13 +16,13 @@ function Filtro() {
 
             <select id="filtro">
 
-                <option value="todos">Esporte</option>
+                <option value="Esporte">Esporte</option>
 
-                <option value="frutas">Data</option>
+                <option value="Data">Data</option>
 
-                <option value="verduras">Hora</option>
+                <option value="Hora">Hora</option>
 
-                <option value="laticinios">Local</option>
+                <option value="Local">Local</option>
 
             </select>
 
