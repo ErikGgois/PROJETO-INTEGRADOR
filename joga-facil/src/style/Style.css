@@ -18,6 +18,13 @@
     
 }
 
+.home-containerlista{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 
 /* Cabeçalho */
 
@@ -62,12 +69,13 @@
 /*EVENTOS*/
 .event-card {
     width: 16rem;
-    background-color: var(--card-color);
+    background-color: rgb(18, 2, 92);
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white;
+    color: rgb(255, 248, 248);
     text-align: center;
+    margin: 10px;
   }
   
   .event-header {
@@ -179,4 +187,23 @@ form {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+
+
+/*Card*/
+.card-container{
+  height: 400px;
+  width: 250px;
+  background-color: #8878df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.card-img{
+  width: 150px;
+  height: 150px;
 }

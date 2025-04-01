@@ -39,7 +39,7 @@ const EventList: React.FC = () => {
   const events = [
     {
       sport: "Futebol",
-      image: "/images/futebol.jpg",
+      image: "",
       participants: "7/12",
       date: "10/04/2025",
       location: "Quadra 1",
@@ -47,7 +47,7 @@ const EventList: React.FC = () => {
     },
     {
       sport: "Vôlei",
-      image: "/images/volei.jpg",
+      image: "",
       participants: "10/12",
       date: "12/04/2025",
       location: "Quadra 2",
@@ -55,7 +55,7 @@ const EventList: React.FC = () => {
     },
     {
       sport: "Tênis",
-      image: "/images/tenis.jpg",
+      image: "",
       participants: "1/2",
       date: "15/04/2025",
       location: "Quadra 3",
