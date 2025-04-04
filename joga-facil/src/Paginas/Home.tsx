@@ -1,8 +1,7 @@
 import Cabecalho from "../Componente/Cabecalho";
 
 import Card from "../Componente/Card";
-
-import ListaEventos from "../Componente/ListaEventos";
+import Filtro from "../Componente/Filtro";
 import Rodape from "../Componente/Rodape";
 import '../style/Style.css';
 import { Link } from 'react-router-dom';
