@@ -45,6 +45,7 @@ function Card(informacoes: InfoCards) {
                     <img className='card-img' src="baseball.jpg"  />
                    </div>
                 }
+                
                                  
                 <div>Categoria: {informacoes.categoria}</div>
                 <div>📅 Data: {informacoes.data}</div>

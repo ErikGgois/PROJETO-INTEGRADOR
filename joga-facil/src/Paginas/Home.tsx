@@ -13,7 +13,8 @@ function Home() {
         {categoria: 'Tenis',      data: '25/05/2025', local: 'Sesc',                  partic: '1/2'},
         {categoria: 'Badminton',  data: '25/05/2025', local: 'Sesc',                  partic: '1/2'},
         {categoria: 'Rugby',      data: '25/05/2025', local: 'Sesc',                  partic: '1/2'},
-        {categoria: 'Basebol',   data: '25/05/2025', local: 'Sesc',                  partic: '1/2'}
+        {categoria: 'Basebol',    data: '25/05/2025', local: 'Sesc',                  partic: '1/2'},
+        
     ]
 
     return (
