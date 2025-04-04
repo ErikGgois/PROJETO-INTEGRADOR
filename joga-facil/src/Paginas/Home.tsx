@@ -1,5 +1,7 @@
 import Cabecalho from "../Componente/Cabecalho";
+
 import Card from "../Componente/Card";
+
 import ListaEventos from "../Componente/ListaEventos";
 import Rodape from "../Componente/Rodape";
 import '../style/Style.css';
@@ -20,6 +22,7 @@ function Home() {
     return (
         <div className="ContainerPrincipal"> 
             <Cabecalho />
+            <Filtro />
             <div className='CadastroJogo'>
                 <Link to='/CadastroEventos'>
                     <h2>
