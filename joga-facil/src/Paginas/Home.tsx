@@ -5,6 +5,35 @@ import Filtro from "../Componente/Filtro";
 import Rodape from "../Componente/Rodape";
 import '../style/Style.css';
 import { Link } from 'react-router-dom';
+import { Eventos} from '../types/eventos'
+
+function RequisicoesTypesAsync(){
+
+    const [eventos, setEventos] = useState<Evento[]>([]);
+
+    const [loading, setLoading] = useState(false);
+
+    const carregarEventos = async () => {
+
+        setLoading(true)
+
+        try{
+            let response = await fetch("");
+            let json = await response.json();
+
+            const dataArray = Array.isArray(json) ? json: [json]
+            setLoading(false);
+
+            setEventos(dataArray);
+        } catch (erro) {
+            setLoading(false);
+
+            alert('Falha ao carregar os Eventos. Tente novamente mais tarde.')
+            console.error(erro);
+        }
+
+    }
+    }
 
 function Home() {
 
