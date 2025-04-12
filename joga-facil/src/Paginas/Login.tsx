@@ -1,7 +1,34 @@
-import { Link, useNavigate,useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate,useParams } from "react-router-dom";
 import Cabecalho from "../Componente/Cabecalho";
+import { useContext, useState } from "react";
+import {api} from "../api";
+
+
+
 
 function Login() {
+
+    const [fUser, setFUser] = useState('');
+    const [fSenha, setFSenha] = useState('');
+    const Navigate = useNavigate();
+  
+
+    const RealizarLogin = async () => {
+        {
+            //metodo para buscar na API o login e senha informados pelo usuario.
+            let json = await api.Logar(fUser, fSenha);
+    
+            if (json.status) {
+                alert('bem vindo,' + fUser);
+               // UsuarioLogadoCtx?.setName(json.usuario);
+    
+                Navigate('/home');
+            }else {
+                alert(json.message);
+            }
+        }
+    }
+    
 
     return (
         <div className="ContainerPrincipal">
