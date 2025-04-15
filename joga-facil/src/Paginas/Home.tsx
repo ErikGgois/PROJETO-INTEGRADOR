@@ -6,6 +6,7 @@ import Rodape from "../Componente/Rodape";
 import '../style/Style.css';
 import { Link } from 'react-router-dom';
 import { Eventos} from '../types/eventos'
+import { useState } from "react";
 
 function RequisicoesTypesAsync(){
 

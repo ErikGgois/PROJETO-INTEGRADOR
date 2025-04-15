@@ -2,11 +2,18 @@ import { Link, Navigate, useNavigate,useParams } from "react-router-dom";
 import Cabecalho from "../Componente/Cabecalho";
 import { useContext, useState } from "react";
 import {api} from "../api";
+import { UsuarioLogadoContext } from "../contexts/contexAuth";
 
 
 
 
 function Login() {
+
+    const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
+
+    function HandleClick() {
+        UsuarioLogadoCtx?.setName("Usuario"); //futuramente puxar da API o nome do usuario
+    }
 
     const [fUser, setFUser] = useState('');
     const [fSenha, setFSenha] = useState('');
@@ -43,7 +50,7 @@ function Login() {
                 <input placeholder="Senha"  name="Senha" type="password"/>
                 <Link to='/'>
                     <h2>
-                        <button> Logar </button> 
+                        <button onClick={HandleClick}> Logar </button> {/* esta faltando exibir conteudo condicional para aparecer o nome do usuario logado */}                       
                     </h2>
 
                  </Link>
