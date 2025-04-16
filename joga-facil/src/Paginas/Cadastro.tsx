@@ -55,9 +55,9 @@ function Cadastro(){
                 <input placeholder="Email"  name="Email" type="email" onChange={ChangeEmail} />
                 <input placeholder="Senha"  name="Senha" type="password" onChange={ChangeSenha}/>
                 <Link to='/login'>
-                    <h2>
+                    
                         <button onClick={HandleAddClick}> Cadastrar </button> 
-                    </h2>
+                    
                  </Link>
             </form>
             <Rodape/>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../../style/Style.css'
 
 function Filtro() {
   const [selectedDate, setSelectedDate] = useState("");
@@ -11,9 +12,9 @@ function Filtro() {
   const locais = ["Bauru", "Curitiba", "São Paulo", "Japão", "Outros"];
 
   return (
-    <div className="1">
+    <div className="filtro-container">
       {/* Filtro de Esporte */}
-      <label htmlFor="esporte">Esporte</label>
+      <label htmlFor="esporte"></label>
       <select id="esporte" name="esporte" defaultValue="">
         <option value="" disabled>Escolha um esporte</option>
         {esportes.map((esporte) => (
@@ -52,7 +53,7 @@ function Filtro() {
       )}
 
       {/* Filtro de Local */}
-      <label htmlFor="local">Local</label>
+      <label htmlFor="local"></label>
       <select id="local" name="local" defaultValue="">
         <option value="" disabled>Escolha um local</option>
         {locais.map((local) => (

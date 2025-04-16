@@ -23,9 +23,9 @@ function CadastroEventos(){
         <CampoData/>
         <CampoHorario/>
         <Link to='/'>
-                    <h2>
+                    
                         <button> Criar Evento </button> 
-                    </h2>
+                    
 
                  </Link>
         </form>

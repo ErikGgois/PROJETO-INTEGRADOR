@@ -31,7 +31,7 @@
 .cabecalho {
     height: 100px;
     width: 100%;
-    background-color: rgb(17, 17, 145);
+    background-color: rgb(18, 2, 92);
     border: solid black 2px;
     display: flex;
     flex-direction: column;
@@ -193,18 +193,67 @@ form {
 
 /*Card*/
 .card-container{
-  height: 400px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   background-color: #8878df;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 10px;
+  margin: 2px;
 }
 
 .card-img{
-  width: 150px;
+  width: 300px;
   height: 150px;
 }
 
+/* css filtro de pesquisa */
+
+.filtro-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-family: 'Arial', sans-serif;
+}
+
+.filtro-container label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.filtro-container select,
+.filtro-container input[type="date"],
+.filtro-container input[type="time"],
+.filtro-container button {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filtro-container select:focus,
+.filtro-container input:focus,
+.filtro-container button:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(18, 2, 92);
+}
+
+.filtro-container button {
+  cursor: pointer;
+  background-color: rgb(18, 2, 92);
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.filtro-container button:hover {
+  background-color: #0056b3;
+}
