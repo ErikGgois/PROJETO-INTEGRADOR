@@ -1,24 +1,17 @@
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import Cabecalho from "../Componente/Cabecalho";
-import { useContext, useState } from "react";
+import { ChangeEvent, useContext, useState } from "react";
 import { api } from "../api";
 import { UsuarioLogadoContext } from "../contexts/contexAuth";
 
 
 
 
+
 function Login() {
 
+
     const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
-
-    function HandleClick() {
-        UsuarioLogadoCtx?.setName("Usuario"); //futuramente puxar da API o nome do usuario
-    }
-
-    const [fUser, setFUser] = useState('');
-    const [fSenha, setFSenha] = useState('');
-    const Navigate = useNavigate();
-
 
     const RealizarLogin = async () => {
         {
@@ -32,9 +25,23 @@ function Login() {
                 Navigate('/home');
             } else {
                 alert(json.message);
+                alert('Usuario ou senha incorretos');
             }
+            
         }
     }
+
+    const [fUser, setAddEmail] = useState('');
+    const HandleAddEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setAddEmail(e.target.value)}
+
+
+    const [fSenha, setAddSenha] = useState('');
+    const HandleAddSenhaChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setAddSenha(e.target.value)}
+
+
+    const Navigate = useNavigate();
 
 
     return (
@@ -46,11 +53,11 @@ function Login() {
                 <h1>Login</h1>
 
 
-                <input placeholder="Email" name="Email" type="email" />
-                <input placeholder="Senha" name="Senha" type="password" />
+                <input placeholder="Email" name="Email" type="email" onChange={HandleAddEmailChange} />
+                <input placeholder="Senha" name="Senha" type="password" onChange={HandleAddSenhaChange} />
                 <Link to='/'>
 
-                    <button onClick={HandleClick}> Logar </button> {/* esta faltando exibir conteudo condicional para aparecer o nome do usuario logado */}
+                    <button onClick={RealizarLogin}> Logar </button> {/* esta faltando exibir conteudo condicional para aparecer o nome do usuario logado */}
 
 
                 </Link>
