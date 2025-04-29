@@ -1,12 +1,17 @@
 export const api = {
     CarregarTodosUsuarios: async () => {
-        let response = await fetch("https://jsonplaceholder.typicode.com/todos");
-        let json = await response.json();
-        return json;
+        try {
+            let response = await fetch("https://jsonplaceholder.typicode.com/users");
+            let json = await response.json();
+            return json;
+        } catch (error) {
+            console.error('Erro ao carregar usuários:', error);
+            throw error;
+        }
     },
 
     Logar: async (username: string, password: string) => {
-        {
+        
             let response = await fetch("https://localhost:3000/login/",
                 {
                     method: 'POST',
@@ -17,7 +22,7 @@ export const api = {
                         }),
 
                     headers: {
-                        'Content-type': 'application/json, charset=UTF-8'
+                        'Content-Type': 'application/json; charset=UTF-8'
                     }
                 }
             )
@@ -25,7 +30,7 @@ export const api = {
 
             console.log(json);
             return json;
-        }
+        
     },
 
     AdicionarUsuarios: async (title: string, body: string, userID: number) => {
@@ -36,11 +41,11 @@ export const api = {
                     ({
                         title,
                         body,
-                        userID: 1,
+                        userID: userID,
                     }),
 
                 headers: {
-                    'Content-type': 'application/json'
+                    'Content-Type': 'application/json'
                 }
             }
         );
@@ -51,4 +56,3 @@ export const api = {
     }
 
 }
-
