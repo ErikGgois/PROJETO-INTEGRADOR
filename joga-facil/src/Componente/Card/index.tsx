@@ -1,4 +1,5 @@
 import '../../style/Style.css';
+import { Link } from 'react-router-dom';
 
 type InfoCards = {
   idCard?: number;
@@ -34,7 +35,7 @@ function Card({ categoria, data, local, numParticip }: InfoCards) {
         <div>📍 Local: {local}</div>
         <div>Qtd Participantes: {numParticip}</div>
         <div>
-          <button className="event-button">Participar</button>
+          <Link to='/Eventos'> <button className="event-button">Participar</button> </Link>
         </div>
       </div>
     </div>

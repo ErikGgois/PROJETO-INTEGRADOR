@@ -8,12 +8,13 @@ function Eventos(){
 
     function HandleVoltar() {
 
-        navegacao('/');
+        navegacao('/Eventos');
     }
 
     return(
     <div className="ContainerPrincipal">
-        <button onClick={HandleVoltar} > Logar </button>
+        {/* aqui tem que ter as informações do evento, local, data, participantes e etc. */}
+        <button onClick={HandleVoltar} > Participar do evento </button>
     </div>
     )
 }
