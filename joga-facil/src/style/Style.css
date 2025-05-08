@@ -257,3 +257,126 @@ form {
 .filtro-container button:hover {
   background-color: #0056b3;
 }
+
+
+/*Personalizaçao dos BOTÕES DE ESPORTES*/
+.esporte-container {
+  margin-top: 16px;
+}
+
+.esporte-label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.botao-esporte {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  height: 50px;
+  width: 75px;
+}
+
+.botao-esporte:hover {
+  background-color: #d0d0d0;
+}
+
+.botao-esporte.selecionado {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #388E3C;
+}
+
+.form-eventos {
+  display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #211e72;
+    max-width: 50%;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+/*personalizaçao dos input*/
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  background-color: white;
+}
+
+/*descricao personalização transparente*/
+
+.input-descricao {
+  margin: 40px 0;
+  width: 100%;
+  max-width: 400px;
+  min-height: 100px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+  background-color: transparent;
+  color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.input-descricao::placeholder {
+  color: #ccc;
+}
+
+.input-descricao:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/*personalização do botao de criar evento*/
+
+.botao-criar-evento {
+  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  
+}
+
+.botao-criar-evento:hover {
+  background: linear-gradient(135deg, #43a047, #1b5e20);
+  transform: translateY(-2px);
+}
