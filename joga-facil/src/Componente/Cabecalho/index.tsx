@@ -14,8 +14,8 @@ function Cabecalho() {
     return(
         <div className="cabecalho">
         <div> <img className='Logocss' src="Logo.png" /> </div>
-        <div className='LoginLink'><Link to='/login'>
-        <button onClick={HandleClick} className='BotaoLogin'> login </button>  
+        <div className='LoginLink'><Link to='/login' className='botao-estilo'>
+           Login
         </Link> </div>
        
         </div>

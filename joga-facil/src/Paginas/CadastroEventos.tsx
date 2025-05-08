@@ -138,7 +138,7 @@ function Eventos() {
             
 </div>
  
-                <button type="submit" className="botao-criar-evento">Criar Evento</button>
+                <button type="submit" className="botao-estilo">Criar Evento</button>
 
 
                 <h5><Link to='/'>Voltar</Link></h5>
