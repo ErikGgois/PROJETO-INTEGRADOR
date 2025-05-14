@@ -53,9 +53,12 @@ function Home() {
             <Cabecalho />
             <Filtro />
             <div className='CadastroJogo'>
-                <Link to='/CadastroEventos'>                   
-                        <button> Criar Evento </button>                     
+                <Link to='/CadastroEventos' className='botao-estilo'>                   
+                    Criar Evento
+                        <br/>  
+                        <br/>                  
                  </Link>
+                 
             </div>
             {/* <ListaEventos/> */}
 

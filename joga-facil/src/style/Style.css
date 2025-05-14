@@ -35,7 +35,6 @@
     border: solid black 2px;
     display: flex;
     flex-direction: column;
-    
 }
 
 /* Rodape */
@@ -99,22 +98,7 @@
     margin-top: 0.5rem;
   }
   
-  .event-button {
-    margin-top: 0.75rem;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    width: 100%;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  
-  .event-button:hover {
-    background-color: #e0e0e0;
-  }
-  
+
   .event-list {
     display: flex;
     gap: 1rem;
@@ -139,7 +123,7 @@ form {
 
     & button {
         border-radius: 30px;
-        background-color: rgb(121, 132, 228);
+        background-color:  rgb(237, 179, 42);;
         height: 40px;
         width: 100%;
         border: none;
@@ -359,8 +343,8 @@ input[type="time"]:focus {
 
 /*personalização do botao de criar evento*/
 
-.botao-criar-evento {
-  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+.botao-estilo {
+  background: rgb(237, 179, 42);
   color: white;
   padding: 12px 24px;
   font-size: 16px;
@@ -371,12 +355,19 @@ input[type="time"]:focus {
   transition: background 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 400px;
+  max-width: 140px;
+  height: 50px;
   display: block;
-  
+  text-decoration: none;
+  text-align: center;
+  margin: 14px 2px;
 }
 
-.botao-criar-evento:hover {
-  background: linear-gradient(135deg, #43a047, #1b5e20);
+.botao-estilo:hover {
+  background: rgb(165, 122, 21);
   transform: translateY(-2px);
+}
+
+.estilobotao-detalhes {
+  text-decoration: none;
 }

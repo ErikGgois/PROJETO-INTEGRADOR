@@ -35,7 +35,7 @@ function Card({ categoria, data, local, numParticip }: InfoCards) {
         <div>📍 Local: {local}</div>
         <div>Qtd Participantes: {numParticip}</div>
         <div>
-          <Link to='/Eventos'> <button className="event-button">Participar</button> </Link>
+          <Link to='/Eventos' className='estilobotao-detalhes'> Detalhes </Link>
         </div>
       </div>
     </div>
