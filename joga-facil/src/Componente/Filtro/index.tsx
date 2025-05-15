@@ -9,7 +9,11 @@ function Filtro() {
   const [showTimePicker, setShowTimePicker] = useState(false);
 
   const esportes = ["Futebol", "Vôlei", "Beach Tênis", "Basquete", "Outros"];
-  const locais = ["Bauru", "Curitiba", "São Paulo", "Japão", "Outros"];
+  const locais = ["digite o local"];
+
+  function aplicarFiltros(event: MouseEvent<HTMLButtonElement, MouseEvent>): void {
+    throw new Error("Function not implemented.");
+  }
 
   return (
     <div className="filtro-container">
@@ -60,9 +64,23 @@ function Filtro() {
           <option key={local} value={local}>{local}</option>
         ))}
       </select>
+
+      <button
+        type="button"
+        onClick={aplicarFiltros}
+        className="px-6 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      >
+        Filtrar
+      </button>
     </div>
   );
 }
+
+
+
+
+
+
 
 // modelo atigo do codigo que o Giovanne fez
 
