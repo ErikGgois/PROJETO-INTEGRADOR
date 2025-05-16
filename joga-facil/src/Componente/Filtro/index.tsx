@@ -57,13 +57,14 @@ function Filtro() {
       )}
 
       {/* Filtro de Local */}
-      <label htmlFor="local"></label>
-      <select id="local" name="local" defaultValue="">
-        <option value="" disabled>Escolha um local</option>
-        {locais.map((local) => (
-          <option key={local} value={local}>{local}</option>
-        ))}
-      </select>
+<label htmlFor="local">Escolha um local:</label>
+<input list="locais" id="local" name="local" />
+
+<datalist id="locais">
+  {locais.map((local) => (
+    <option key={local} value={local} />
+  ))}
+</datalist>
 
       <button
         type="button"
@@ -72,77 +73,10 @@ function Filtro() {
       >
         Filtrar
       </button>
-    </div>
+//     </div>
   );
 }
 
 
-
-
-
-
-
-// modelo atigo do codigo que o Giovanne fez
-
-//   //function Filtro() {
-//     const [showCalendar, setShowCalendar] = useState(false);
-//     const [selectedDate, setSelectedDate] = useState("");
-
-//     const [showTimePicker, setShowTimePicker] = useState(false);
-//     const [selectedTime, setSelectedTime] = useState("");
-
-//     return (
-//         <div>
-//             <label htmlFor="filtro"></label>
-//             <select id="filtro" defaultValue="">
-//                 <option value="" disabled>Esportes</option>
-//                 <option value="Futebol">Futebol</option>
-//                 <option value="Vôlei">Vôlei</option>
-//                 <option value="Beach Tênis">Beach Tênis</option>
-//                 <option value="Basquete">Basquete</option>
-//                 <option value="Outros">Outros</option>
-//             </select>
-
-//             <button onClick={() => setShowCalendar(!showCalendar)}>
-//                 {selectedDate ? selectedDate : "Data"}
-//             </button>
-
-//             {showCalendar && (
-//                 <input
-//                     type="date"
-//                     onChange={(e) => {
-//                         setSelectedDate(e.target.value);
-//                         setShowCalendar(false);
-//                     }}
-//                 />
-//             )}
-
-// <button onClick={() => setShowTimePicker(!showTimePicker)}>
-//                 {selectedTime ? selectedTime : "Hora"}
-//             </button>
-
-//             {showTimePicker && (
-//                 <input
-//                     type="time"
-//                     onChange={(e) => {
-//                         setSelectedTime(e.target.value);
-//                         setShowTimePicker(false);
-//                     }}
-//                 />
-//             )}
-
-// <label htmlFor="filtro"></label>
-//             <select id="filtro" defaultValue="">
-//                 <option value="" disabled>Local</option>
-//                 <option value="Futebol">Bauru</option>
-//                 <option value="Vôlei">Curitiba</option>
-//                 <option value="Beach Tênis">São Paulo</option>
-//                 <option value="Basquete">Japao</option>
-//                 <option value="Outros">Outros</option>
-//             </select>
-
-//         </div>
-//     );
-// }
 
 export default Filtro;
