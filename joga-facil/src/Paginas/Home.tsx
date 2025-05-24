@@ -6,37 +6,32 @@ import Rodape from "../Componente/Rodape";
 import '../style/Style.css';
 import { Link } from 'react-router-dom';
 import { Eventos} from '../types/eventos'
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { api } from "../api";
 
-function RequisicoesTypesAsync(){
+    
+function Home() {
 
-    const [eventos, setEventos] = useState<Evento[]>([]);
 
+    const [eventos, setEventos] = useState<Eventos[]>([]);
     const [loading, setLoading] = useState(false);
 
-    const carregarEventos = async () => {
+    const carregarEventos = async () => {        
+        setLoading(true);
+        let json = await api.CarregarTodosEventos();      
+        const dataArray = Array.isArray(json) ? json: [json]
+        setLoading(false);        
+        setEventos(dataArray);    
+    }  
 
-        setLoading(true)
 
-        try{
-            let response = await fetch("");
-            let json = await response.json();
-
-            const dataArray = Array.isArray(json) ? json: [json]
-            setLoading(false);
-
-            setEventos(dataArray);
-        } catch (erro) {
-            setLoading(false);
-
-            alert('Falha ao carregar os Eventos. Tente novamente mais tarde.')
-            console.error(erro);
-        }
-
-    }
-    }
-
-function Home() {
+    useEffect( ()=> {
+        carregarEventos();
+    }, // primeiro parametro do effect é o que ele deve rodar.
+        []  // Segundo parâmetro é quando deve rodar. // o Array vazio não permite executar mais de uma vez.
+            // Essa tag vazia monitora QUANDO será executado o effect. Para monitorar uma const, basta colocar [age] [name] etc...
+     )
+ 
 
     const Lista = [
         {categoria: 'Futebol',    data: '01/01/2025', local: 'Campo 1',               partic: '1/12'},
@@ -62,16 +57,25 @@ function Home() {
             </div>
             {/* <ListaEventos/> */}
 
-            <div className="home-containerlista">
+            {/* <div className="home-containerlista">
                 {Lista.map((item, index) => (
                     <div>                                         
                         <Card categoria={item.categoria} data = {item.data} local = {item.local} numParticip = {item.partic} />
                     </div>                                
                     )
                 )}              
-            </div>
+            </div> */}
             
 
+
+            <div className="home-containerlista">
+                {eventos.map((item, index) => (
+                    <div>                                         
+                        <Card categoria={item.IDCATEGORIA} data = {item.DATA} local = {item.LOCAL} numParticip = {item.QTDPARTICIPANTES} />
+                    </div>                                
+                    )
+                )}              
+            </div>
            
             <Rodape />
         </div>

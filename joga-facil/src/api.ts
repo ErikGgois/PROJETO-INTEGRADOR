@@ -12,13 +12,13 @@ export const api = {
 
     Logar: async (username: string, password: string) => {
         
-            let response = await fetch("https://localhost:3000/login/",
+            let response = await fetch("http://localhost:3000/usuarios/login",
                 {
                     method: 'POST',
                     body: JSON.stringify
                         ({
-                            email: username,
-                            senha: password
+                            EMAIL: username,
+                            SENHA: password
                         }),
 
                     headers: {
@@ -33,15 +33,43 @@ export const api = {
         
     },
 
-    AdicionarUsuarios: async (title: string, body: string, userID: number) => {
-        let response = await fetch("https://jsonplaceholder.typicode.com/posts",
+    criarEventos: async (
+            ID: string,
+            IDCATEGORIA: string,
+            DATA: string,
+            LOCAL: string,
+            QTDPARTICIPANTES: string
+      ) => {
+        let response = await fetch('http://localhost:3000/eventos', {
+          method: 'POST',
+          body: JSON.stringify({
+            ID,
+            IDCATEGORIA,
+            DATA,
+            LOCAL,
+            QTDPARTICIPANTES
+          }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+       
+        let json = await response.json();
+        console.log(json);
+        return json;
+      },
+
+    criarEvento: async (ID: string, IDCATEGORIA: string, DATA: string, LOCAL: string, QTDPARTICIPANTES: string ) => {
+        let response = await fetch("http://localhost:3000/eventos",
             {
                 method: 'POST',
                 body: JSON.stringify
                     ({
-                        title,
-                        body,
-                        userID: userID,
+                        ID,
+                        IDCATEGORIA,
+                        DATA,
+                        LOCAL,
+                        QTDPARTICIPANTES
                     }),
 
                 headers: {
@@ -53,6 +81,14 @@ export const api = {
 
         console.log(json);
         return json;
-    }
+    },
+    
+    CarregarTodosEventos: async () => {
+        let response = await fetch('http://localhost:3000/eventos');    
+        let json = await response.json();
+        return json.EVENTOS;
+    },
+
+
 
 }

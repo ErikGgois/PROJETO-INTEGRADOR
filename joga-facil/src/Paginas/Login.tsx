@@ -16,13 +16,16 @@ function Login() {
     const RealizarLogin = async () => {
         {
             //metodo para buscar na API o login e senha informados pelo usuario.
+
             let json = await api.Logar(fUser, fSenha);
+            
+              Navigate('/');
 
             if (json.status) {
                 alert('bem vindo,' + fUser);
                 // UsuarioLogadoCtx?.setName(json.usuario);
 
-                Navigate('/home');
+                Navigate('/');
             } else {
                 alert(json.message);
                 alert('Usuario ou senha incorretos');
@@ -49,25 +52,20 @@ function Login() {
 
             <Cabecalho />
             <br />
-            <form>
+            <div className="Loginestilo"> 
                 <h1>Login</h1>
 
 
                 <input placeholder="Email" name="Email" type="email" onChange={HandleAddEmailChange} />
                 <input placeholder="Senha" name="Senha" type="password" onChange={HandleAddSenhaChange} />
-                <Link to='/'>
-
+        
                     <button onClick={RealizarLogin}> Logar </button> {/* esta faltando exibir conteudo condicional para aparecer o nome do usuario logado */}
-
-
-                </Link>
-
 
                 <h3 style={{ color: "white" }}>Não tem conta?</h3>
                 <h5><Link to='/cadastro'> Cadastrar
                 </Link>
                 </h5>
-            </form>
+                </div>
         </div>
     )
 }

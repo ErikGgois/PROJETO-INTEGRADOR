@@ -1,7 +1,8 @@
-export type eventos = {
-    id: string;
-    categoria: string;
-    data: string;
-    local: string;
-    qtdParticipantes: string;
+export type Eventos = {
+    ID: string;
+    IDCATEGORIA: string;
+    DATA: string;
+    LOCAL: string;
+    QTDPARTICIPANTES: string;
+    IDUSUARIO: string;
 }
