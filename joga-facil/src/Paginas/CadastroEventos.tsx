@@ -8,34 +8,28 @@ import "../style/Style.css"
 function Eventos() {
     const navigate = useNavigate();
 
-    const [descricao, setDescricao] = useState('');
+    
     const [nomeEvento, setNomeEvento] = useState('');
     const [data, setData] = useState('');
-    const [horario, setHorario] = useState('');
+    // const [horario, setHorario] = useState('');
     const [local, setLocal] = useState('');
-    const [esporte, setEsporte] = useState('');
+    const [participantes, setParticipantes] = useState('');
+   
 
-    const esportes = ['Futebol', 'Vôlei', 'Basquete', 'Tênis',];
+ 
 
     const handleCriarEvento = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        const novoEvento = {
-            ID,
-            IDCATEGORIA,
-            DATA,
-            LOCAL,
-            QTDPARTICIPANTES
-        };
-
         try {
-            const response = await api.criarEvento(novoEvento);
+            const response = await api.criarEvento(nomeEvento, data, local, participantes);
 
             if (response.status) {
                 alert('Evento criado com sucesso!');
-                navigate('/eventos');
+                navigate('/');
             } else {
-                alert('Erro ao criar evento: ' + response.message);
+                alert('' + response.message);
+                navigate('/');
             }
         } catch (error) {
             alert('Erro na requisição: ' + error);
@@ -61,48 +55,36 @@ function Eventos() {
                     value={data}
                     onChange={(e) => setData(e.target.value)}
                 />
-                <input
+                {/* <input
                     placeholder="Horário"
                     type="time"
                     value={horario}
                     onChange={(e) => setHorario(e.target.value)}
-                />
+                /> */}
                 <input
                     placeholder="Local"
                     type="text"
                     value={local}
                     onChange={(e) => setLocal(e.target.value)}
                 />
+                <input
+                    placeholder="Quantidade de participantes"
+                    type="number"
+                    value={participantes}
+                    onChange={(e) => setParticipantes(e.target.value)}
+                />
 
-<div className="esporte-container">
-    <label className="esporte-label"><h6 style={{ color: "white" }}>Escolha o esporte:</h6></label>
-    {esportes.map((item) => (
-        <button
-            key={item}
-            type="button"
-            onClick={() => setEsporte(item)}
-            className={`botao-esporte ${esporte === item ? 'selecionado' : ''}`}
-        >
-            {item}
-        </button>
-    ))}      
-     
-     <textarea
-    placeholder="Descrição do evento"
-    value={descricao}
-    onChange={(e) => setDescricao(e.target.value)}
-    className="input-descricao"
-/>
+
 
             
 </div>
  
-                <button type="submit" className="botao-estilo" onClick={handleCriarEvento}>Criar Evento</button>
+                <button type="submit" className="botao-estilo" onClick={handleCriarEvento} >Criar Evento</button>
 
 
                 <h5><Link to='/'>Voltar</Link></h5>
             </div>
-        </div>
+      
     );
 }
 

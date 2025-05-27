@@ -29,9 +29,9 @@ function Cadastro(){
         setSenha(Event.target.value);
     }
 
-        const AdicionarUsuarios = async () => {
+        const criarUsuario = async () => {
     
-            let json = await api.AdicionarUsuarios(nome, idade, 1); 
+            let json = await api.criarUsuario(nome, idade, email, senha); 
                 
             if (json.id) {
                 alert('Post Adicionado com sucesso!')                    
@@ -40,15 +40,13 @@ function Cadastro(){
             }                  
         }
 
-        function HandleAddClick() {
-            AdicionarUsuarios();
-        }
+
 
     return(
-        <div className="cadastro">
+        <div className="containerCadastro">
             <Cabecalho/>
             <br />
-            <form>
+            <div className="cadastroestilo">
                 <h1>Cadastro de Usuario</h1>
                 <input placeholder="Nome"  name="Nome" type="text" onChange={ChangeNome}/>
                 <input placeholder="Idade"  name="Idade" type="number" onChange={ChangeIdade}/>
@@ -56,10 +54,10 @@ function Cadastro(){
                 <input placeholder="Senha"  name="Senha" type="password" onChange={ChangeSenha}/>
                 <Link to='/login'>
                     
-                        <button onClick={HandleAddClick}> Cadastrar </button> 
+                        <button onClick={criarUsuario}> Cadastrar </button> 
                     
                  </Link>
-            </form>
+            </div>
             <Rodape/>
         </div>
     )

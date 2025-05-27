@@ -10,6 +10,53 @@ export const api = {
         }
     },
 
+    // criarUsuario: async (NOME: string, IDADE: string, EMAIL: string, SENHA: string ) => {
+    //     let response = await fetch("http://localhost:3000/Cadastro",
+    //         {
+    //             method: 'POST',
+    //             body: JSON.stringify
+    //                 ({
+    //                     NOME,
+    //                     IDADE,
+    //                     EMAIL,
+    //                     SENHA
+    //                 }),
+
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             }
+    //         }
+    //     );
+    //     let json = await response.json();
+
+    //     console.log(json);
+    //     return json;
+    // },
+
+    criarUsuario: async (NOME: string, IDADE: string, EMAIL: string, SENHA: string ) => {
+        let response = await fetch("http://localhost:3000/usuarios",
+            {
+                method: 'POST',
+                body: JSON.stringify
+                    ({
+                        NOME,
+                        IDADE,
+                        EMAIL,
+                        SENHA
+                    }),
+
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
+        let json = await response.json();
+
+        console.log(json);
+        return json;
+    },
+    
+
     Logar: async (username: string, password: string) => {
         
             let response = await fetch("http://localhost:3000/usuarios/login",
@@ -33,39 +80,14 @@ export const api = {
         
     },
 
-    criarEventos: async (
-            ID: string,
-            IDCATEGORIA: string,
-            DATA: string,
-            LOCAL: string,
-            QTDPARTICIPANTES: string
-      ) => {
-        let response = await fetch('http://localhost:3000/eventos', {
-          method: 'POST',
-          body: JSON.stringify({
-            ID,
-            IDCATEGORIA,
-            DATA,
-            LOCAL,
-            QTDPARTICIPANTES
-          }),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-       
-        let json = await response.json();
-        console.log(json);
-        return json;
-      },
+ 
 
-    criarEvento: async (ID: string, IDCATEGORIA: string, DATA: string, LOCAL: string, QTDPARTICIPANTES: string ) => {
+    criarEvento: async (IDCATEGORIA: string, DATA: string, LOCAL: string, QTDPARTICIPANTES: string ) => {
         let response = await fetch("http://localhost:3000/eventos",
             {
                 method: 'POST',
                 body: JSON.stringify
                     ({
-                        ID,
                         IDCATEGORIA,
                         DATA,
                         LOCAL,
