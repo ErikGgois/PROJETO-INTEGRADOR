@@ -62,7 +62,7 @@ function Eventos() {
                     onChange={(e) => setHorario(e.target.value)}
                 /> */}
                 <input
-                    placeholder="Local"
+                    placeholder="Local e horario"
                     type="text"
                     value={local}
                     onChange={(e) => setLocal(e.target.value)}
