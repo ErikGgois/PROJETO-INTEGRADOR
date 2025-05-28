@@ -54,19 +54,7 @@ function Home() {
                         <br/>                  
                  </Link>
                  
-            </div>
-            {/* <ListaEventos/> */}
-
-            {/* <div className="home-containerlista">
-                {Lista.map((item, index) => (
-                    <div>                                         
-                        <Card categoria={item.categoria} data = {item.data} local = {item.local} numParticip = {item.partic} />
-                    </div>                                
-                    )
-                )}              
-            </div> */}
-            
-
+            </div>            
 
             <div className="home-containerlista">
                 {eventos.map((item, index) => (

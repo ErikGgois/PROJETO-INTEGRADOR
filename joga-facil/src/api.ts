@@ -10,29 +10,6 @@ export const api = {
         }
     },
 
-    // criarUsuario: async (NOME: string, IDADE: string, EMAIL: string, SENHA: string ) => {
-    //     let response = await fetch("http://localhost:3000/Cadastro",
-    //         {
-    //             method: 'POST',
-    //             body: JSON.stringify
-    //                 ({
-    //                     NOME,
-    //                     IDADE,
-    //                     EMAIL,
-    //                     SENHA
-    //                 }),
-
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             }
-    //         }
-    //     );
-    //     let json = await response.json();
-
-    //     console.log(json);
-    //     return json;
-    // },
-
     criarUsuario: async (NOME: string, IDADE: string, EMAIL: string, SENHA: string ) => {
         let response = await fetch("http://localhost:3000/usuarios",
             {
