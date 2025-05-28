@@ -18,7 +18,7 @@ function Cabecalho() {
     return (
         <div className="cabecalho">
             <div>
-                <img className='Logocss' src="Logo.png" alt="Logo" />
+            <Link to='/'> <img className='Logocss' src="Logo.png" alt="Logo" /> </Link>
             </div>
             <div className='LoginLink'>
                 {!UsuarioLogadoCtx?.name ? (<Link to='/login' className='botao-estilo'>Login</Link>) : (
