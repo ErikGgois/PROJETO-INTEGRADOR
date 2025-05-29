@@ -11,7 +11,7 @@ export const api = {
     },
 
     criarUsuario: async (NOME: string, IDADE: string, EMAIL: string, SENHA: string ) => {
-        let response = await fetch("http://localhost:3000/usuarios",
+        let response = await fetch("https://projeto-integrador-backend-4.onrender.com/usuarios",
             {
                 method: 'POST',
                 body: JSON.stringify
@@ -36,7 +36,7 @@ export const api = {
 
     Logar: async (username: string, password: string) => {
         
-            let response = await fetch("http://localhost:3000/usuarios/login",
+            let response = await fetch("https://projeto-integrador-backend-4.onrender.com/login",
                 {
                     method: 'POST',
                     body: JSON.stringify
@@ -60,7 +60,7 @@ export const api = {
  
 
     criarEvento: async (IDCATEGORIA: string, DATA: string, LOCAL: string, QTDPARTICIPANTES: string ) => {
-        let response = await fetch("http://localhost:3000/eventos",
+        let response = await fetch("https://projeto-integrador-backend-4.onrender.com/eventos",
             {
                 method: 'POST',
                 body: JSON.stringify
@@ -83,7 +83,7 @@ export const api = {
     },
     
     CarregarTodosEventos: async () => {
-        let response = await fetch('http://localhost:3000/eventos');    
+        let response = await fetch('https://projeto-integrador-backend-4.onrender.com/eventos');    
         let json = await response.json();
         return json.EVENTOS;
     },
