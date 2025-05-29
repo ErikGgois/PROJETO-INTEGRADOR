@@ -1,14 +1,14 @@
 export const api = {
-    CarregarTodosUsuarios: async () => {
-        try {
-            let response = await fetch("https://jsonplaceholder.typicode.com/users");
-            let json = await response.json();
-            return json;
-        } catch (error) {
-            console.error('Erro ao carregar usuários:', error);
-            throw error;
-        }
-    },
+    // CarregarTodosUsuarios: async () => {
+    //     try {
+    //         let response = await fetch("https://jsonplaceholder.typicode.com/users");
+    //         let json = await response.json();
+    //         return json;
+    //     } catch (error) {
+    //         console.error('Erro ao carregar usuários:', error);
+    //         throw error;
+    //     }
+    // },
 
     criarUsuario: async (NOME: string, IDADE: string, EMAIL: string, SENHA: string ) => {
         let response = await fetch("https://projeto-integrador-backend-4.onrender.com/usuarios",
