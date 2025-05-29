@@ -36,7 +36,7 @@ export const api = {
 
     Logar: async (username: string, password: string) => {
         
-            let response = await fetch("https://projeto-integrador-backend-4.onrender.com/login",
+            let response = await fetch("https://projeto-integrador-backend-4.onrender.com/usuarios/login",
                 {
                     method: 'POST',
                     body: JSON.stringify
